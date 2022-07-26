@@ -1,0 +1,80 @@
+============authorize======
+request:
+	{
+        "country": "US",
+        "firstName": "US",
+        "lastName": "US",
+        "postalCode": "94043",
+        "state": "CA",
+        "city": "Mountain View",
+        "street1": "1600 Amphitheatre Parkway",
+        "region": "CA",
+        "purchaseTotals_currency": "USD",
+        "purchaseTotals_grandTotalAmount": "10",
+    "email":"ahmed@gmail.com",
+        "creditCardType": "VISA",
+        "walletType": "GOOGLE",
+        "token": "eyJzaWduYXR1cmUiOiJNRVlDSVFDZHlKWGI0ZVFHM09WOHc0SzNBZ1V3ZFF3T3hFM3k4blFEZWtpemcycHA1d0loQUxBUmpNWEYyZlVaNnhtVkN3Vnd2QW9Cb2wyZGlnNHhLK0FKUG1kWEZJMngiLCJwcm90b2NvbFZlcnNpb24iOiJFQ3YxIiwic2lnbmVkTWVzc2FnZSI6IntcImVuY3J5cHRlZE1lc3NhZ2VcIjpcIjlJU0tBSlBpSzlCUFJsa0VsVjVabmlqU1RTWnRVZUpGWlRVdzFMZHhHVzhmT20rVHlWRnNPc3FsNi90SitwYXRXZ1JtdUFrYnpibWw0UlV6RHpnYTl2L1dteWdOYXhMcFh5dlZaTlFmVGJiYkxHRmdySHdTcHFQSnpiRXhNQzg1cFJhcG9EZzdGQTJiM0ZTM3RwZ2ZHZEZpSlFjMTNxejQwT1owd0ZNdXNWMU5UT0lHTmxZUERUbEptSmIrZWROaTZHb1paQzZqdmZxN1V2ZG1ld0dpQ1c3ellDS2UzREFWSFVCU0xjcnVRR2NOODZ0YTA4OXM5UC9nVnJMTjg1U2hvLzZBbEluSjN6MDRrMTBlY2RadEVnR0s4K2lYZCtnN1Y2YjNnR2F5WXczWUFHa0FoL0FpSFB6bk9EL04zd1NrUkx0ZkpJWERWWmhaNno1Mno2dlRIQjdXRmt0cjJRaFZIeSswOVZsNmhnWkEwMG83aXl1MXcweUJOTkNPeUVHcHM3eWtEb3A2Y0dHME9VUEZKTTZjZSt4TjgrL3BHeUl4eko0VDNLS1ZiRUdCNEd6akkwSldWVnh4ckpUYWJqSkdjWDI1clFUdGxmeHRiSkVuWFY3OEJCc0gvZ0lSSDRBNmlZYWhvdHp3RlVOY1RaSFI3R3VGR0Z4L2RxWmtReFltYXBGNmRYY1ZGVlVhYWp1dGlqUDh2THB6ZkxtK1poTUE4Nlp6WnlMMTFkcjhtN05VME9TVTlyRGRyZTJ0a1pXMWtoaEgvbTR4U2dcXHUwMDNkXFx1MDAzZFwiLFwiZXBoZW1lcmFsUHVibGljS2V5XCI6XCJCSnAwWFRETm9Yc1JnMUJKd1pyNGVLb3dGZkRCY0RRNHdVY3I0N25OWDBLUmtLUEpTZTJ0NDFvMUhFeTdhcEljbnRhMG54cXM4SmNWNmhLY1hOcGZlMThcXHUwMDNkXCIsXCJ0YWdcIjpcImNtVUo1RVdraEwyM1BjSXlHa3B4Tnh6dFZzV2dLajcrUG03Ym94cmFMcDBcXHUwMDNkXCJ9In0="
+    }
+
+{
+  "orderId": null,
+  "transactionId": null,
+  "authCode": "6586199966446034003009",
+  "authorizationID": null,
+  "captureID": null,
+  "refundID": null
+}
+ ================ capture ===============
+ {
+    "authRequestID": "6587957669556364803008",
+    "currency": "USD",
+    "totalAmount": "1.0"
+ }
+
+ resposne
+ {
+   "orderId": null,
+   "transactionId": null,
+   "authCode": null,
+   "requestid": "6586189892766623603011"
+ }
+
+  ================ Refund capture ===============
+
+
+{
+    "authRequestID": "6586185243546345503007",
+    "captureID": "6586189892766623603011",
+    "currency": "USD",
+    "totalAmount": "1.0"
+ }
+
+ resposne :
+ {
+   "orderId": null,
+   "transactionId": null,
+   "authCode": null,
+   "authorizationID": null,
+   "captureID": null,
+   "refundID": "6586197561396897303010"
+ }
+
+==============reverse auth ============
+request: {
+{
+    "authRequestID": "6586199966446034003009",
+    "currency": "USD",
+    "totalAmount": "10"
+ }
+
+ resposne :
+ {
+   "orderId": null,
+   "transactionId": null,
+   "authCode": "6586206142086741304012",
+   "authorizationID": null,
+   "captureID": null,
+   "refundID": null
+ }
+}

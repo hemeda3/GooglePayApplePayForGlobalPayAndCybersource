@@ -1,0 +1,64 @@
+auth-from swagger:
+==============================authorize================================================
+{
+  "amount": "10",
+  "authCode": "string",
+  "currency": "USD",
+  "digitalPaymentToken": "eyJzaWduYXR1cmUiOiJNRVlDSVFEb2gyZnN6dnowSFliRkJrYkpyTmEwSFgyMVhvdWZ5STI2akNJNDYwVlhEQUloQU1MRU04WGd1cmhwSndXbmRETHhEYzBZUHdEZmNxMU15a2M1UWhvU2cyTHIiLCJwcm90b2NvbFZlcnNpb24iOiJFQ3YxIiwic2lnbmVkTWVzc2FnZSI6IntcImVuY3J5cHRlZE1lc3NhZ2VcIjpcIklNQk5nMmE0QnJpWm9UQzRidTJSU2FZUG9LN2VsU05EMWU0cU95YW95UUdsSGE4RFl3Y0oxcnluQ3VRcWxvblFIZ0ZHUVg3RmRJR0FMYnJuUXFqWk04MkgrZ09PQ1NwbmlrS3pRUGxRcTlYa1ZUQ1JsZWE2N1ZNV21NNUdjZncwa2FudkhLZVdzVW93Q1VRNmtrY2FOOXRhK2lvV2JtVk5DMmgvNUVkbHJUaDRnM3plM2ZEeDVENjhmc0pCQ3N4TGJud0oxUnM3ejBIS0dOaTY3NWh0alpzNTlhbVd0d0ZHSzU3WHc1N25oOGJ0RHovWXVTb21ORTZoKzlzR0lmSjdOTlJSejgwK0dnMWY4R2ZHR3FMM24wZEh5ZFdHMW9mSDVYY0dlZ3dzOTcwVUFmNW8xUmNMRUdhdnErLy9sVGxqYVZBd0hnTVFtWGkyM3BObnJRcE42OS9CelBOc3hzVDNPOUpQNitFVERFdDZZV095dEIzNHU5a2xmR2U1Ni9iSFlHSC94V3kvRHJsUjk2RlAwcTVzS04waGhKWUNCR2RQVzhvdTB2dVVtZEpkek9aNG9aQy9ocU92dXNEVXRXcjhvemVmWjQ0N3RNV0V6NSswQ0ZLNVFBXFx1MDAzZFxcdTAwM2RcIixcImVwaGVtZXJhbFB1YmxpY0tleVwiOlwiQkkxN2VDTEVwR3d4N1c4c2pnL3Fmc245eXM4Ymg3U05BUDJyVG5DRjE0anpnVVNpajNoUlVPZG0wN1JMSUNCcXdjb3lzbWN1bjc0bXJsSUNNZGFZOUZNXFx1MDAzZFwiLFwidGFnXCI6XCJteHJGc3BzcXFqNEI0SnlINlNyaU9oSFhLY1FPeSttRGdBRDZyNUJTRVpBXFx1MDAzZFwifSJ9",
+  "orderId": "string",
+  "transactionId": "string",
+  "walletType": "GOOGLE"
+}
+-> resposne {
+ {
+   "orderId": "xHf0A2cLSSSfOeHKvsUCrw",
+   "transactionId": "16586157918316348",
+   "authCode": "12345"
+
+}
+==============================reverse================================================
+
+{
+  "orderId": "TGHPDVinSKetl3PDNoboMA",
+  "transactionId": "16586149057541739"
+  }
+
+resposne:
+
+{
+  "orderId": "TGHPDVinSKetl3PDNoboMA",
+  "transactionId": "16586151323944406",
+  "authCode": "000000"
+}
+===================================capture================================
+request:
+{
+    "orderId": "xHf0A2cLSSSfOeHKvsUCrw",
+    "transactionId": "16586157918316348",
+    "authCode": "12345"
+
+}
+
+response:
+{
+  "orderId": "xHf0A2cLSSSfOeHKvsUCrw",
+  "transactionId": "16586158459641091",
+  "authCode": "000000"
+}
+==============================refund== USE AUTHCODE + Transactionid + OrderID from First step ONLY=====================================
+request:
+{
+ "orderId": "TGHPDVinSKetl3PDNoboMA",
+  "transactionId": "16586149057541739"
+  "authCode": "12345",
+  "currency": "USD",
+  "amount": "10"
+}
+
+resposne:
+{
+  "orderId": "xHf0A2cLSSSfOeHKvsUCrw",
+  "transactionId": "16586159943283468",
+  "authCode": "003954"
+}
+
